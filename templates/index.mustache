@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <title>BUILT CoLAB Control Dashboard</title>
+  <!-- Compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+    type="text/javascript"
+  ></script>
+  <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <span>&NonBreakingSpace;</span>
+        CoLAB Dashboard
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="http://smarthub.iot.lan:3000">Grafana</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      {{#body}}
+      <div class="col m3">
+        <div class="card blue darken-1">
+          <div class="card-content white-text center-align">
+            <span class="card-title">{{ title }}</span>
+            <i class="large material-icons">{{ icon }}</i>
+            <h2 class="mqtt-topic" id="{{{ topic }}}">_</h2>
+          </div>
+          <div class="card-action center-align">
+            {{#actions}}
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('{{{topic}}}','{{{message}}}')"
+            >
+              {{ message }}
+            </a>
+            {{/actions}}
+          </div>
+        </div>
+      </div>
+      {{/body}}
+    </div>
+  </div>
+</body>

@@ -1,0 +1,57 @@
+{
+    "body": [
+        {
+            "title": "Workspace Light 1",
+            "icon": "light",
+            "topic": "lightbox/lightbox-i/switch/light_3/state",
+            "actions": [
+                {
+                    "message": "ON",
+                    "topic": "dashboard/lights/workspace/one"
+                },
+                {
+                    "message": "OFF",
+                    "topic": "dashboard/lights/workspace/one"
+                },
+                {
+                    "message": "ALL",
+                    "topic": "dashboard/lights/workspace/all"
+                }
+
+            ]
+        },
+        {
+            "title": "Workspace Light 2",
+            "icon": "light",
+            "topic": "lightbox/lightbox-i/switch/light_6/state",
+            "actions": [
+                {
+                    "message": "ON",
+                    "topic": "dashboard/lights/workspace/two"
+                },
+                {
+                    "message": "OFF",
+                    "topic": "dashboard/lights/workspace/two"
+                }
+
+            ]
+        },
+        {
+            "title": "Light 2",
+            "icon": "light",
+            "topic": "lightbox/lightbox-i/switch/light_2/state",
+            "actions": [
+                {
+                    "message": "ON",
+                    "topic": "testtopic/1"
+                },
+                {
+                    "message": "OFF",
+                    "topic": "testtopic"
+                }
+
+            ]
+        }
+
+    ]
+}

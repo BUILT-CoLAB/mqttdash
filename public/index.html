@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <title>BUILT CoLAB Control Dashboard</title>
+  <!-- Compiled and minified CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+    type="text/javascript"
+  ></script>
+  <script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <span>&NonBreakingSpace;</span>
+        CoLAB Dashboard
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="http://smarthub.iot.lan:3000">Grafana</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col m3">
+        <div class="card blue darken-1">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Workspace Light 1</span>
+            <i class="large material-icons">light</i>
+            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_3/state">_</h2>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('dashboard/lights/workspace/one','ON')"
+            >
+              ON
+            </a>
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('dashboard/lights/workspace/one','OFF')"
+            >
+              OFF
+            </a>
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('dashboard/lights/workspace/all','ALL')"
+            >
+              ALL
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card blue darken-1">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Workspace Light 2</span>
+            <i class="large material-icons">light</i>
+            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_6/state">_</h2>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('dashboard/lights/workspace/two','ON')"
+            >
+              ON
+            </a>
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('dashboard/lights/workspace/two','OFF')"
+            >
+              OFF
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card blue darken-1">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Light 2</span>
+            <i class="large material-icons">light</i>
+            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_2/state">_</h2>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('testtopic/1','ON')"
+            >
+              ON
+            </a>
+            <a
+              class="waves-effect waves-light btn"
+              onclick="sendMessage('testtopic','OFF')"
+            >
+              OFF
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
