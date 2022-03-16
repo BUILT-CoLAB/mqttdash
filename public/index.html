@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>BUILT CoLAB Control Dashboard</title>
+  <title>Dashboard</title>
   <!-- Compiled and minified CSS -->
   <link
     rel="stylesheet"
@@ -20,11 +20,14 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper blue darken-4">
       <a href="#" class="brand-logo">
         <span>&NonBreakingSpace;</span>
-        CoLAB Dashboard
+       
+        <span>&NonBreakingSpace;</span>
+        Dashboard
       </a>
+      <a href="#" class="brand-logo center"> <img style="max-height: 35px" src="https:&#x2F;&#x2F;builtcolab.pt&#x2F;wp-content&#x2F;uploads&#x2F;2020&#x2F;10&#x2F;builtcolab-logo-white.svg"/></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="http://smarthub.iot.lan:3000">Grafana</a></li>
       </ul>
@@ -33,76 +36,158 @@
   <div class="container">
     <div class="row">
       <div class="col m3">
-        <div class="card blue darken-1">
+        <div class="card blue darken-4 mqtt-topic" id="lightbox/lightbox-i/switch/light_3/state"  data-ON="yellow"data-OFF="blue">
           <div class="card-content white-text center-align">
-            <span class="card-title">Workspace Light 1</span>
-            <i class="large material-icons">light</i>
-            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_3/state">_</h2>
+            <span class="card-title">Workspace 1</span>
+            <i class="medium material-icons">light</i>
+            <h4 class="mqtt-payload">_</h4>
           </div>
           <div class="card-action center-align">
             <a
-              class="waves-effect waves-light btn"
+              class="waves-effect waves-light btn "
+              
               onclick="sendMessage('dashboard/lights/workspace/one','ON')"
             >
-              ON
+              ON 
             </a>
             <a
-              class="waves-effect waves-light btn"
+              class="waves-effect waves-light btn "
+              
               onclick="sendMessage('dashboard/lights/workspace/one','OFF')"
             >
-              OFF
-            </a>
-            <a
-              class="waves-effect waves-light btn"
-              onclick="sendMessage('dashboard/lights/workspace/all','ALL')"
-            >
-              ALL
+              OFF 
             </a>
           </div>
         </div>
       </div>
       <div class="col m3">
-        <div class="card blue darken-1">
+        <div class="card blue darken-4 mqtt-topic" id="lightbox/lightbox-i/switch/light_6/state"  data-ON="yellow"data-OFF="blue">
           <div class="card-content white-text center-align">
-            <span class="card-title">Workspace Light 2</span>
-            <i class="large material-icons">light</i>
-            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_6/state">_</h2>
+            <span class="card-title">Workspace 2</span>
+            <i class="medium material-icons">light</i>
+            <h4 class="mqtt-payload">_</h4>
           </div>
           <div class="card-action center-align">
             <a
-              class="waves-effect waves-light btn"
+              class="waves-effect waves-light btn "
+              
               onclick="sendMessage('dashboard/lights/workspace/two','ON')"
             >
-              ON
+              ON 
             </a>
             <a
-              class="waves-effect waves-light btn"
+              class="waves-effect waves-light btn "
+              
               onclick="sendMessage('dashboard/lights/workspace/two','OFF')"
             >
-              OFF
+              OFF 
             </a>
           </div>
         </div>
       </div>
       <div class="col m3">
-        <div class="card blue darken-1">
+        <div class="card blue darken-4 mqtt-topic" id="lightbox/lightbox-i/switch/light_2/state"  data-ON="yellow"data-OFF="blue">
           <div class="card-content white-text center-align">
-            <span class="card-title">Light 2</span>
-            <i class="large material-icons">light</i>
-            <h2 class="mqtt-topic" id="lightbox/lightbox-i/switch/light_2/state">_</h2>
+            <span class="card-title">CoLAB Space</span>
+            <i class="medium material-icons">light</i>
+            <h4 class="mqtt-payload">_</h4>
           </div>
           <div class="card-action center-align">
             <a
-              class="waves-effect waves-light btn"
-              onclick="sendMessage('testtopic/1','ON')"
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/colab-space/one','ON')"
             >
-              ON
+              ON 
             </a>
             <a
-              class="waves-effect waves-light btn"
-              onclick="sendMessage('testtopic','OFF')"
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/colab-space/one','OFF')"
             >
-              OFF
+              OFF 
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card blue darken-4 mqtt-topic" id="lightbox/lightbox-i/switch/light_7/state"  data-ON="yellow"data-OFF="blue">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Meetings Room</span>
+            <i class="medium material-icons">light</i>
+            <h4 class="mqtt-payload">_</h4>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/meetings-room/two','ON')"
+            >
+              ON 
+            </a>
+            <a
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/meetings-room/two','OFF')"
+            >
+              OFF 
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card blue darken-4 mqtt-topic" id="lightbox/lightbox-i/switch/light_1/state"  data-ON="yellow"data-OFF="blue">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Offices</span>
+            <i class="medium material-icons">light</i>
+            <h4 class="mqtt-payload">_</h4>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/offices/one','ON')"
+            >
+              ON 
+            </a>
+            <a
+              class="waves-effect waves-light btn "
+              
+              onclick="sendMessage('dashboard/lights/offices/one','OFF')"
+            >
+              OFF 
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card blue darken-4 mqtt-topic" id="doorbox/doorbox-i/state"  data-OPEN="yellow"data-UNLOCK="red"data-LOCK="purple">
+          <div class="card-content white-text center-align">
+            <span class="card-title">Door</span>
+            <i class="medium material-icons">exit_to_app</i>
+            <h4 class="mqtt-payload">_</h4>
+          </div>
+          <div class="card-action center-align">
+            <a
+              class="waves-effect waves-light btn tooltipped"
+               data-position="top" data-tooltip="Temporary"
+              onclick="sendMessage('dashboard/door','OPEN')"
+            >
+              OPEN 
+            </a>
+            <a
+              class="waves-effect waves-light btn tooltipped"
+               data-position="top" data-tooltip="Permanent"
+              onclick="sendMessage('dashboard/door','UNLOCK')"
+            >
+              UNLOCK 
+            </a>
+            <a
+              class="waves-effect waves-light btn tooltipped"
+               data-position="top" data-tooltip="Permanent"
+              onclick="sendMessage('dashboard/door','LOCK')"
+            >
+              LOCK 
             </a>
           </div>
         </div>

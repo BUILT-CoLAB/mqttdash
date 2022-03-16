@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>BUILT CoLAB Control Dashboard</title>
+  <title>{{dashboard}}</title>
   <!-- Compiled and minified CSS -->
   <link
     rel="stylesheet"
@@ -20,11 +20,14 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper blue darken-4">
       <a href="#" class="brand-logo">
         <span>&NonBreakingSpace;</span>
-        CoLAB Dashboard
+       
+        <span>&NonBreakingSpace;</span>
+        {{dashboard}}
       </a>
+      <a href="#" class="brand-logo center"> <img style="max-height: 35px" src="{{logo}}"/></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="http://smarthub.iot.lan:3000">Grafana</a></li>
       </ul>
@@ -32,27 +35,28 @@
   </nav>
   <div class="container">
     <div class="row">
-      {{#body}}
+      {{#devices}}
       <div class="col m3">
-        <div class="card blue darken-1">
+        <div class="card blue darken-4 mqtt-topic" id="{{{ topic }}}"  {{#actions}}{{#color}}data-{{message}}="{{color}}"{{/color}}{{/actions}}>
           <div class="card-content white-text center-align">
             <span class="card-title">{{ title }}</span>
-            <i class="large material-icons">{{ icon }}</i>
-            <h2 class="mqtt-topic" id="{{{ topic }}}">_</h2>
+            <i class="medium material-icons">{{ icon }}</i>
+            <h4 class="mqtt-payload">_</h4>
           </div>
           <div class="card-action center-align">
             {{#actions}}
             <a
-              class="waves-effect waves-light btn"
+              class="waves-effect waves-light btn {{#obs}}tooltipped{{/obs}}"
+              {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
               onclick="sendMessage('{{{topic}}}','{{{message}}}')"
             >
-              {{ message }}
+              {{ message }} 
             </a>
             {{/actions}}
           </div>
         </div>
       </div>
-      {{/body}}
+      {{/devices}}
     </div>
   </div>
 </body>

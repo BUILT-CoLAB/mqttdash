@@ -1,53 +1,114 @@
 {
-    "body": [
+    "dashboard": "Dashboard",
+    "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
+    "devices": [
         {
-            "title": "Workspace Light 1",
+            "title": "Workspace 1",
             "icon": "light",
             "topic": "lightbox/lightbox-i/switch/light_3/state",
             "actions": [
                 {
                     "message": "ON",
+                    "color": "yellow",
                     "topic": "dashboard/lights/workspace/one"
                 },
                 {
                     "message": "OFF",
+                    "color": "blue",
                     "topic": "dashboard/lights/workspace/one"
-                },
-                {
-                    "message": "ALL",
-                    "topic": "dashboard/lights/workspace/all"
                 }
-
             ]
         },
         {
-            "title": "Workspace Light 2",
+            "title": "Workspace 2",
             "icon": "light",
             "topic": "lightbox/lightbox-i/switch/light_6/state",
             "actions": [
                 {
                     "message": "ON",
+                    "color": "yellow",
                     "topic": "dashboard/lights/workspace/two"
                 },
                 {
                     "message": "OFF",
+                    "color": "blue",
                     "topic": "dashboard/lights/workspace/two"
                 }
-
             ]
         },
         {
-            "title": "Light 2",
+            "title": "CoLAB Space",
             "icon": "light",
             "topic": "lightbox/lightbox-i/switch/light_2/state",
             "actions": [
                 {
                     "message": "ON",
-                    "topic": "testtopic/1"
+                    "color": "yellow",
+                    "topic": "dashboard/lights/colab-space/one"
                 },
                 {
                     "message": "OFF",
-                    "topic": "testtopic"
+                    "color": "blue",
+                    "topic": "dashboard/lights/colab-space/one"
+                }
+            ]
+        },
+        {
+            "title": "Meetings Room",
+            "icon": "light",
+            "topic": "lightbox/lightbox-i/switch/light_7/state",
+            "actions": [
+                {
+                    "message": "ON",
+                    "color": "yellow",
+                    "topic": "dashboard/lights/meetings-room/two"
+                },
+                {
+                    "message": "OFF",
+                    "color": "blue",
+                    "topic": "dashboard/lights/meetings-room/two"
+                }
+            ]
+        },
+        {
+            "title": "Offices",
+            "icon": "light",
+            "topic": "lightbox/lightbox-i/switch/light_1/state",
+            "actions": [
+                {
+                    "message": "ON",
+                    "color": "yellow",
+                    "topic": "dashboard/lights/offices/one"
+                },
+                {
+                    "message": "OFF",
+                    "color": "blue",
+                    "topic": "dashboard/lights/offices/one"
+                }
+            ]
+        },
+        {
+            "title": "Door",
+            "icon": "exit_to_app",
+            "topic": "doorbox/doorbox-i/state",
+            "actions": [
+                {
+                    "message": "OPEN",
+                    "obs": "Temporary",
+                    "color": "yellow",
+                    "topic": "dashboard/door"
+                },
+                {
+                    "message": "UNLOCK",
+                    "obs": "Permanent",
+                    "color": "red",
+                    "topic": "dashboard/door"
+                },
+                {
+                    "message": "LOCK",
+                    "topic": "dashboard/door",
+                    "obs": "Permanent",
+                    "color": "purple"
                 }
 
             ]

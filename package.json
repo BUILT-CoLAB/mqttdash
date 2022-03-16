@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mustache config.json templates/index.mustache > public/index.html",
+    "build": "mustache config.json templates/index.mustache > public/index.html && copyfiles main.js public/",
     "serve": "http-server public -p 8080",
     "dev": "nodemon -e * --ignore public/* --exec \"npm run build && npm run serve\""
   },
@@ -14,6 +14,7 @@
     "mustache": "^4.2.0"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "http-server": "^14.1.0",
     "nodemon": "^2.0.15"
   }
