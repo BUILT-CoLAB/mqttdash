@@ -17,7 +17,7 @@ client.connect({ onSuccess: onConnect, onFailure: onFailure });
 // called when the client connects
 function onConnect() {
     // Once a connection has been made
-    console.log("onConnect");
+    console.info("onConnect");
     for (const element of document.getElementsByClassName("mqtt-topic")) {
         client.subscribe(element.id)
     }
@@ -25,15 +25,15 @@ function onConnect() {
 
 function onFailure(responseObject) {
     // Once a connection has failed
-    console.log("onFailure");
+    console.info("onFailure");
     if (responseObject.errorCode !== 0) {
-        console.log("onConnectionLost:" + responseObject.errorMessage);
+        console.error("onConnectionLost:" + responseObject.errorMessage);
     }
 }
 
 
 function sendMessage(topic, payload) {
-    console.log("sendMessage");
+    console.info("sendMessage");
     message = new Paho.MQTT.Message(payload);
     message.destinationName = topic;
     client.send(message);
@@ -42,7 +42,7 @@ function sendMessage(topic, payload) {
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
-        console.log("onConnectionLost:" + responseObject.errorMessage);
+        console.error("onConnectionLost:" + responseObject.errorMessage);
     }
 }
 
@@ -52,15 +52,15 @@ async function update(elementId, value) {
     let colorattribute = Object.assign({}, elementCard.dataset)
     console.log(colorattribute)
     if (Object.keys(colorattribute).length > 0) {
-        elementCard.classList.remove("red", "yellow", "blue", "pink", "orange")
+        elementCard.classList.remove("red", "yellow", "blue", "pink", "orange", "green", "teal", "blue-grey", "grey")
         elementCard.classList.add(colorattribute[value.toString().toLowerCase()])
+    } else {
+        elementCard.classList.add("grey")
     }
 }
 
 // called when a message arrives
 function onMessageArrived(message) {
-    //console.log("topic:" + message.destinationName);
-    //console.log("content:" + message.payloadString);
-    console.log(message.payloadString)
+    //console.info(message.destinationName, message.payloadString)
     update(message.destinationName, message.payloadString.toLowerCase())
 }

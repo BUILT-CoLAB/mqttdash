@@ -10,12 +10,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "topic": "dashboard/lights/workspace/one"
+                    "actionTopic": "dashboard/lights/workspace/one"
                 },
                 {
                     "message": "OFF",
-                    "color": "blue",
-                    "topic": "dashboard/lights/workspace/one"
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/lights/workspace/one"
                 }
             ]
         },
@@ -27,12 +27,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "topic": "dashboard/lights/workspace/two"
+                    "actionTopic": "dashboard/lights/workspace/two"
                 },
                 {
                     "message": "OFF",
-                    "color": "blue",
-                    "topic": "dashboard/lights/workspace/two"
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/lights/workspace/two"
                 }
             ]
         },
@@ -44,12 +44,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "topic": "dashboard/lights/colab-space/one"
+                    "actionTopic": "dashboard/lights/colab-space/one"
                 },
                 {
                     "message": "OFF",
-                    "color": "blue",
-                    "topic": "dashboard/lights/colab-space/one"
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/lights/colab-space/one"
                 }
             ]
         },
@@ -61,12 +61,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "topic": "dashboard/lights/meetings-room/two"
+                    "actionTopic": "dashboard/lights/meetings-room/two"
                 },
                 {
                     "message": "OFF",
-                    "color": "blue",
-                    "topic": "dashboard/lights/meetings-room/two"
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/lights/meetings-room/two"
                 }
             ]
         },
@@ -78,39 +78,64 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "topic": "dashboard/lights/offices/one"
+                    "actionTopic": "dashboard/lights/offices/one"
                 },
                 {
                     "message": "OFF",
-                    "color": "blue",
-                    "topic": "dashboard/lights/offices/one"
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/lights/offices/one"
                 }
             ]
         },
         {
             "title": "Door",
-            "icon": "exit_to_app",
+            "icon": "door_front",
             "topic": "doorbox/doorbox-i/state",
             "actions": [
                 {
                     "message": "OPEN",
                     "obs": "Temporary",
                     "color": "yellow",
-                    "topic": "dashboard/door"
+                    "actionTopic": "dashboard/door"
                 },
                 {
                     "message": "UNLOCK",
                     "obs": "Permanent",
                     "color": "red",
-                    "topic": "dashboard/door"
+                    "actionTopic": "dashboard/door"
                 },
                 {
                     "message": "LOCK",
-                    "topic": "dashboard/door",
+                    "actionTopic": "dashboard/door",
                     "obs": "Permanent",
                     "color": "purple"
                 }
 
+            ]
+        },
+        {
+            "title": "3D Printer",
+            "icon": "view_in_ar",
+            "topic": "3dprinter/cr200b/virtual/status",
+            "actions": [
+                {
+                    "message": "on",
+                    "color": "blue",
+                    "actionTopic": "shellies/plug-i/relay/0/command"
+                },
+                {
+                    "message": "off",
+                    "color": "blue-grey",
+                    "actionTopic": "shellies/plug-i/relay/0/command"
+                },
+                {
+                    "message": "Operational",
+                    "color": "green"
+                },
+                {
+                    "message": "Printing",
+                    "color": "yellow"
+                }
             ]
         }
 

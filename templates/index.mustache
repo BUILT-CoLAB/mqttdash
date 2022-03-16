@@ -37,21 +37,23 @@
     <div class="row">
       {{#devices}}
       <div class="col m3">
-        <div class="card blue darken-4 mqtt-topic" id="{{{ topic }}}"  {{#actions}}{{#color}}data-{{message}}="{{color}}"{{/color}}{{/actions}}>
+        <div class="card grey darken-4 mqtt-topic" id="{{{ topic }}}"  {{#actions}}{{#color}}data-{{message}}="{{color}}"{{/color}}{{/actions}}>
           <div class="card-content white-text center-align">
             <span class="card-title">{{ title }}</span>
             <i class="medium material-icons">{{ icon }}</i>
-            <h4 class="mqtt-payload">_</h4>
+            <h4><span class="mqtt-payload">_</span>{{#unit}}<span>{{unit}}</span>{{/unit}}</h4>
           </div>
           <div class="card-action center-align">
             {{#actions}}
-            <a
-              class="waves-effect waves-light btn {{#obs}}tooltipped{{/obs}}"
-              {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
-              onclick="sendMessage('{{{topic}}}','{{{message}}}')"
-            >
-              {{ message }} 
-            </a>
+              {{#actionTopic}}
+              <a
+                class="waves-effect waves-light blue darken-4 btn {{#obs}}tooltipped{{/obs}}"
+                {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
+                onclick="sendMessage('{{{actionTopic}}}','{{{message}}}')"
+              >
+                {{ message }}  
+              </a>
+              {{/actionTopic}}
             {{/actions}}
           </div>
         </div>
