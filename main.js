@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const elems = document.querySelectorAll('.tooltipped');
-    M.Tooltip.init(elems, {});
+    M.AutoInit();
 });
 
 // Create a client instance
@@ -12,7 +11,6 @@ client.onMessageArrived = onMessageArrived;
 
 // connect the client
 client.connect({ onSuccess: onConnect, onFailure: onFailure });
-
 
 // called when the client connects
 function onConnect() {
@@ -30,7 +28,6 @@ function onFailure(responseObject) {
         console.error("onConnectionLost:" + responseObject.errorMessage);
     }
 }
-
 
 function sendMessage(topic, payload) {
     console.info("sendMessage");

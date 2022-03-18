@@ -11,7 +11,7 @@
     rel="stylesheet"
   />
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
     type="text/javascript"
@@ -46,6 +46,7 @@
           <div class="card-action center-align">
             {{#actions}}
               {{#actionTopic}}
+              {{#message}}
               <a
                 class="waves-effect waves-light blue darken-4 btn {{#obs}}tooltipped{{/obs}}"
                 {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
@@ -53,6 +54,27 @@
               >
                 {{ message }}  
               </a>
+              {{/message}}
+              {{#inputMin}}
+              <div class="row">
+              <div class="col s2">
+              {{inputMin}}
+              </div>
+                <div class="col s8">
+                  <form action="#">
+                    <label>
+                    
+                    <p class="range-field">
+                      <input type="range" min="{{inputMin}}" max="{{inputMax}}" onclick="sendMessage('{{{actionTopic}}}','{{{message}}}')"/>
+                    </p>
+                    </label>        
+                  </form>
+                </div>  
+              <div class="col s2">
+              {{inputMax}}
+              </div>
+              </div>
+              {{/inputMin}}
               {{/actionTopic}}
             {{/actions}}
           </div>

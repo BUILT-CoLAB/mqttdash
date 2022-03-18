@@ -3,6 +3,24 @@
     "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
     "devices": [
         {
+            "title": "Office",
+            "icon": "apartment",
+            "topic": "dashboard/office/control",
+            "image": "",
+            "actions": [
+                {
+                    "message": "ARRIVAL",
+                    "color": "yellow",
+                    "actionTopic": "dashboard/office/control"
+                },
+                {
+                    "message": "GOODBYE",
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/office/control"
+                }
+            ]
+        },
+        {
             "title": "Workspace 1",
             "icon": "light",
             "topic": "lightbox/lightbox-i/switch/light_3/state",
@@ -135,6 +153,29 @@
                 {
                     "message": "Printing",
                     "color": "yellow"
+                }
+            ]
+        },
+        {
+            "title": "AC Unit 1",
+            "icon": "hvac",
+            "topic": "hvac/hvac-i/virtual/status",
+            "actions": [
+                {
+                    "color": "blue",
+                    "actionTopic": "dashboard/hvac/one/temp",
+                    "inputMin": "18",
+                    "inputMax": "30"
+                },
+                {
+                    "message": "off",
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/hvac/one/on"
+                },
+                {
+                    "message": "on",
+                    "color": "red",
+                    "actionTopic": "dashboard/hvac/one/off"
                 }
             ]
         }
