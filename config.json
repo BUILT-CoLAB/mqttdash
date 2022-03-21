@@ -108,7 +108,7 @@
         {
             "title": "Door",
             "icon": "door_front",
-            "topic": "doorbox/doorbox-i/state",
+            "topic": "doorbox/doorbox-i/notify",
             "actions": [
                 {
                     "message": "OPEN",
@@ -126,7 +126,7 @@
                     "message": "LOCK",
                     "actionTopic": "dashboard/door",
                     "obs": "Permanent",
-                    "color": "purple"
+                    "color": "green"
                 }
 
             ]
@@ -153,6 +153,33 @@
                 {
                     "message": "Printing",
                     "color": "yellow"
+                }
+            ]
+        },
+        {
+            "title": "AC Unit 1",
+            "icon": "hvac",
+            "topic": "hvac/hvac-i/virtual/status",
+            "actions": [
+                {
+                    "message": "on",
+                    "color": "red",
+                    "actionTopic": "dashboard/hvac/one/off"
+                },
+                {
+                    "message": "+",
+                    "color": "green",
+                    "actionTopic": "dashboard/hvac/one/plus"
+                },
+                {
+                    "message": "-",
+                    "color": "green",
+                    "actionTopic": "dashboard/hvac/one/minus"
+                },
+                {
+                    "message": "off",
+                    "color": "blue-grey",
+                    "actionTopic": "dashboard/hvac/one/on"
                 }
             ]
         }
