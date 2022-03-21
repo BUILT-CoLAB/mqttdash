@@ -62,12 +62,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/colab-space/one"
+                    "actionTopic": "dashboard/lights/colab-space"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/colab-space/one"
+                    "actionTopic": "dashboard/lights/colab-space"
                 }
             ]
         },
@@ -79,12 +79,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/meetings-room/two"
+                    "actionTopic": "dashboard/lights/meetings-room"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/meetings-room/two"
+                    "actionTopic": "dashboard/lights/meetings-room"
                 }
             ]
         },
@@ -96,12 +96,12 @@
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/offices/one"
+                    "actionTopic": "dashboard/lights/offices"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/offices/one"
+                    "actionTopic": "dashboard/lights/offices"
                 }
             ]
         },
