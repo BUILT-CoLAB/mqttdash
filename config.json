@@ -155,29 +155,6 @@
                     "color": "yellow"
                 }
             ]
-        },
-        {
-            "title": "AC Unit 1",
-            "icon": "hvac",
-            "topic": "hvac/hvac-i/virtual/status",
-            "actions": [
-                {
-                    "color": "blue",
-                    "actionTopic": "dashboard/hvac/one/temp",
-                    "inputMin": "18",
-                    "inputMax": "30"
-                },
-                {
-                    "message": "off",
-                    "color": "blue-grey",
-                    "actionTopic": "dashboard/hvac/one/on"
-                },
-                {
-                    "message": "on",
-                    "color": "red",
-                    "actionTopic": "dashboard/hvac/one/off"
-                }
-            ]
         }
 
     ]

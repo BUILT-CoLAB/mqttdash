@@ -1,0 +1,27 @@
+{
+    "title": "AC Unit 1",
+    "icon": "hvac",
+    "topic": "hvac/hvac-i/virtual/status",
+    "actions": [
+        {
+            "message": "on",
+            "color": "red",
+            "actionTopic": "dashboard/hvac/one/off"
+        },
+        {
+            "message": "+",
+            "color": "green",
+            "actionTopic": "dashboard/hvac/one/plus"
+        },
+        {
+            "message": "-",
+            "color": "green",
+            "actionTopic": "dashboard/hvac/one/minus"
+        },
+        {
+            "message": "off",
+            "color": "blue-grey",
+            "actionTopic": "dashboard/hvac/one/on"
+        }
+    ]
+}
