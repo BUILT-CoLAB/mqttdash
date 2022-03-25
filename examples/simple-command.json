@@ -1,0 +1,26 @@
+{
+    "title": "Door",
+    "icon": "door_front",
+    "topic": "doorbox/doorbox-i/notify",
+    "actions": [
+        {
+            "message": "OPEN",
+            "obs": "Temporary",
+            "color": "yellow",
+            "actionTopic": "dashboard/door"
+        },
+        {
+            "message": "UNLOCK",
+            "obs": "Permanent",
+            "color": "red",
+            "actionTopic": "dashboard/door"
+        },
+        {
+            "message": "LOCK",
+            "actionTopic": "dashboard/door",
+            "obs": "Permanent",
+            "color": "green"
+        }
+
+    ]
+}
