@@ -156,7 +156,7 @@
                 },
                 {
                     "message": "Offline",
-                    "color": "red"
+                    "color": "orange"
                 }
             ]
         }
