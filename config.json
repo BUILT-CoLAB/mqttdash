@@ -153,6 +153,10 @@
                 {
                     "message": "Printing",
                     "color": "yellow"
+                },
+                {
+                    "message": "Offline",
+                    "color": "red"
                 }
             ]
         }
