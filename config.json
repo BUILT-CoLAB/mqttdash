@@ -11,97 +11,109 @@
                 {
                     "message": "ARRIVAL",
                     "color": "yellow",
-                    "actionTopic": "office/control/cmd"
+                    "actionTopic": "office/control/cmd",
+                    "retained": true
                 },
                 {
                     "message": "GOODBYE",
                     "color": "blue-grey",
-                    "actionTopic": "office/control/cmd"
+                    "actionTopic": "office/control/cmd",
+                    "retained": true
                 }
             ]
         },
         {
             "title": "Workspace 1",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_3/cmd",
+            "topic": "lightbox/lightbox-i/switch/light_3/state",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
+                    "retained": true
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
+                    "retained": true
                 }
             ]
         },
         {
             "title": "Workspace 2",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_6/cmd",
+            "topic": "lightbox/lightbox-i/switch/light_6/state",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
+                    "retained": true
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
+                    "retained": true
                 }
             ]
         },
         {
             "title": "CoLAB Space",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_2/cmd",
+            "topic": "lightbox/lightbox-i/switch/light_2/state",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
+                    "retained": true
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
+                    "retained": true
                 }
             ]
         },
         {
             "title": "Meetings Room",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_7/cmd",
+            "topic": "lightbox/lightbox-i/switch/light_7/state",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
+                    "retained": true
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
+                    "retained": true
                 }
             ]
         },
         {
             "title": "Offices",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_1/cmd",
+            "topic": "lightbox/lightbox-i/switch/light_1/state",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
+                    "retained": true
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
+                    "retained": true
                 }
             ]
         },

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdirp public && mustache config.json templates/index.mustache > public/index.html && copyfiles main.js public/  && copyfiles style.css public/",
+    "build": "mkdirp public && mustache config.json templates/index.mustache > public/index.html && copyfiles main.js public/ && copyfiles lib/* public/ && copyfiles style.css public/",
     "serve": "http-server public -p 8080",
     "dev": "nodemon -e * --ignore public/* --exec \"npm run build && npm run serve\""
   },

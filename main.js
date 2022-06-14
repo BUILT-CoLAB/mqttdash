@@ -1,20 +1,17 @@
 // Create a client instance
-client = new Paho.MQTT.Client("smarthub.dev.lan", Number(9001), "mqtt");
+const clientID = "web" + new Date().getTime();
+client = new Paho.Client("smarthub.dev.lan", Number(9001), clientID);
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
-
-// connect the client
-client.connect({ onSuccess: onConnect, onFailure: onFailure });
 
 // called when the client connects
 function onConnect() {
     // Once a connection has been made
     console.info("onConnect");
     for (const element of document.getElementsByClassName("mqtt-topic")) {
-        let status = client.subscribe(element.id);
-        console.info(`Subscribed to ${element.id}, with status: ${status}`);
+        client.subscribe(element.id);
     }
 }
 
@@ -22,23 +19,29 @@ function onFailure(responseObject) {
     // Once a connection has failed
     console.info("onFailure");
     if (responseObject.errorCode !== 0) {
-        console.error("onConnectionLost:" + responseObject.errorMessage);
+        console.error(`onConnectionLost: ${responseObject.errorMessage}`);
     }
 }
 
-function sendMessage(topic, payload) {
+// connect the client
+client.connect({
+    onSuccess: onConnect, onFailure: onFailure, reconnect: true, keepAliveInterval: 30
+});
+
+function sendMessage(topic, payload, retained = false) {
     console.info("sendMessage");
-    message = new Paho.MQTT.Message(payload);
+    message = new Paho.Message(payload);
     message.destinationName = topic;
+    message.retained = retained;
     client.send(message);
 }
+
 
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
         console.error("onConnectionLost:" + responseObject.errorMessage);
-        client.connect();
-    } 
+    }
 }
 
 async function update(elementId, value) {
