@@ -1,5 +1,5 @@
 // Create a client instance
-client = new Paho.MQTT.Client("smarthub.iot.lan", Number(9001), "mqtt");
+client = new Paho.MQTT.Client("smarthub.dev.lan", Number(9001), "mqtt");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
@@ -13,7 +13,8 @@ function onConnect() {
     // Once a connection has been made
     console.info("onConnect");
     for (const element of document.getElementsByClassName("mqtt-topic")) {
-        client.subscribe(element.id)
+        let status = client.subscribe(element.id);
+        console.info(`Subscribed to ${element.id}, with status: ${status}`);
     }
 }
 
@@ -36,7 +37,8 @@ function sendMessage(topic, payload) {
 function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
         console.error("onConnectionLost:" + responseObject.errorMessage);
-    }
+        client.connect();
+    } 
 }
 
 async function update(elementId, value) {

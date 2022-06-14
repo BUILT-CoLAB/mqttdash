@@ -5,130 +5,104 @@
         {
             "title": "Office",
             "icon": "apartment",
-            "topic": "dashboard/office/control",
+            "topic": "office/control",
             "image": "",
             "actions": [
                 {
                     "message": "ARRIVAL",
                     "color": "yellow",
-                    "actionTopic": "dashboard/office/control"
+                    "actionTopic": "office/control/cmd"
                 },
                 {
                     "message": "GOODBYE",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/office/control"
+                    "actionTopic": "office/control/cmd"
                 }
             ]
         },
         {
             "title": "Workspace 1",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_3/state",
+            "topic": "lightbox/lightbox-i/switch/light_3/cmd",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/workspace/one"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/workspace/one"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd"
                 }
             ]
         },
         {
             "title": "Workspace 2",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_6/state",
+            "topic": "lightbox/lightbox-i/switch/light_6/cmd",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/workspace/two"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/workspace/two"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd"
                 }
             ]
         },
         {
             "title": "CoLAB Space",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_2/state",
+            "topic": "lightbox/lightbox-i/switch/light_2/cmd",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/colab-space"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/colab-space"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd"
                 }
             ]
         },
         {
             "title": "Meetings Room",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_7/state",
+            "topic": "lightbox/lightbox-i/switch/light_7/cmd",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/meetings-room"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/meetings-room"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd"
                 }
             ]
         },
         {
             "title": "Offices",
             "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_1/state",
+            "topic": "lightbox/lightbox-i/switch/light_1/cmd",
             "actions": [
                 {
                     "message": "ON",
                     "color": "yellow",
-                    "actionTopic": "dashboard/lights/offices"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd"
                 },
                 {
                     "message": "OFF",
                     "color": "blue-grey",
-                    "actionTopic": "dashboard/lights/offices"
+                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd"
                 }
-            ]
-        },
-        {
-            "title": "Door",
-            "icon": "door_front",
-            "topic": "doorbox/doorbox-i/notify",
-            "actions": [
-                {
-                    "message": "OPEN",
-                    "obs": "Temporary",
-                    "color": "yellow",
-                    "actionTopic": "dashboard/door"
-                },
-                {
-                    "message": "UNLOCK",
-                    "obs": "Permanent",
-                    "color": "red",
-                    "actionTopic": "dashboard/door"
-                },
-                {
-                    "message": "LOCK",
-                    "actionTopic": "dashboard/door",
-                    "obs": "Permanent",
-                    "color": "green"
-                }
-
             ]
         },
         {
@@ -153,10 +127,6 @@
                 {
                     "message": "Printing",
                     "color": "yellow"
-                },
-                {
-                    "message": "Offline",
-                    "color": "orange"
                 }
             ]
         }
