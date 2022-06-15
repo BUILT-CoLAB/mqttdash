@@ -48,7 +48,7 @@ async function update(elementId, value) {
     let elementCard = document.getElementById(elementId)
     elementCard.getElementsByClassName("mqtt-payload")[0].textContent = value.toUpperCase()
     let colorattribute = Object.assign({}, elementCard.dataset)
-    console.log(colorattribute)
+    //console.log(colorattribute)
     if (Object.keys(colorattribute).length > 0) {
         elementCard.classList.remove("red", "yellow", "blue", "pink", "orange", "green", "teal", "blue-grey", "grey")
         elementCard.classList.add(colorattribute[value.toString().toLowerCase()])
@@ -59,6 +59,6 @@ async function update(elementId, value) {
 
 // called when a message arrives
 function onMessageArrived(message) {
-    //console.info(message.destinationName, message.payloadString)
+    console.info(message.destinationName, message.payloadString)
     update(message.destinationName, message.payloadString.toLowerCase())
 }
