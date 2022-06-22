@@ -26,7 +26,7 @@ body {
   background-color: #212121;
 }
 .blue {
-  background-color: #13405b;
+  background-color: #0a3d62;
 }
 .indigo {
   background-color: #1a237e;
@@ -50,13 +50,21 @@ body {
   background-color: #e65100;
 }
 
+.card-footer {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px -5px 4px 0px;
+}
+
 .card-footer .card-footer-item {
   color: #e8e8e8;
-  background-color: #13405b;
+  background-color: #0a3d62;
   text-transform: uppercase;
 }
 .tabs.is-toggle li.is-active a {
   border-color: hsla(0, 0%, 0%, 0);
+}
+
+.navbar {
+  box-shadow: 0px 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .tabs.is-toggle a {
@@ -67,7 +75,7 @@ body {
 }
 
 .tabs.is-toggle li.is-active a {
-  background-color: #13405b;
+  background-color: #0a3d62;
 }
 
 .tabs.is-toggle a:hover {

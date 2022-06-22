@@ -4,13 +4,8 @@
   "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
   "categories": [
     {
-      "name": "All",
-      "category": "all",
-      "icon": "select_all",
-      "default": "true"
-    },
-    {
       "name": "Switches",
+      "default": "true",
       "category": "switch",
       "icon": "tungsten"
     },
@@ -23,6 +18,11 @@
       "name": "Sensors",
       "category": "sensor",
       "icon": "sensors"
+    },
+    {
+      "name": "All",
+      "category": "all",
+      "icon": "select_all"
     }
   ],
   "extralinks": [

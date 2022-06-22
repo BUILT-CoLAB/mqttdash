@@ -86,13 +86,17 @@ function setVisibleByCat(category) {
 
 document.querySelectorAll('.category-btn').forEach(item => {
     item.addEventListener('click', event => {
-        let category = event.target.dataset['category'];
+        const category = event.target.dataset['category'];
         location.hash = category;
         setVisibleByCat(category);
     })
 })
 
 if (window.location.hash) {
-    let hash = location.hash.substring(1);
+    const hash = location.hash.substring(1);
     setVisibleByCat(hash);
+} else {
+    const category = document.querySelectorAll(`.is-active`)[0].children[0].dataset['category'];
+    location.hash = category;
+    setVisibleByCat(category);
 }
