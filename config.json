@@ -1,146 +1,222 @@
 {
-    "dashboard": "Dashboard",
-    "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
-    "devices": [
+  "dashboard": "Dashboard",
+  "favicon": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-icon-150x150.png",
+  "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
+  "categories": [
+    {
+      "name": "All",
+      "category": "all",
+      "icon": "select_all",
+      "default": "true"
+    },
+    {
+      "name": "Switches",
+      "category": "switch",
+      "icon": "tungsten"
+    },
+    {
+      "name": "Actuators",
+      "category": "actuator",
+      "icon": "precision_manufacturing"
+    },
+    {
+      "name": "Sensors",
+      "category": "sensor",
+      "icon": "sensors"
+    }
+  ],
+  "extralinks": [
+    {
+      "name": "Grafana",
+      "icon": "analytics",
+      "url": "http://smarthub.dev.lan:3000"
+    }
+  ],
+  "devices": [
+    {
+      "title": "Office",
+      "icon": "apartment",
+      "topic": "office/control",
+      "category": "switch",
+      "actions": [
         {
-            "title": "Office",
-            "icon": "apartment",
-            "topic": "office/control",
-            "image": "",
-            "actions": [
-                {
-                    "message": "ARRIVAL",
-                    "color": "yellow",
-                    "actionTopic": "office/control/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "GOODBYE",
-                    "color": "blue-grey",
-                    "actionTopic": "office/control/cmd",
-                    "retained": true
-                }
-            ]
+          "message": "ARRIVAL",
+          "color": "yellow",
+          "actionTopic": "office/control/cmd",
+          "retained": true
         },
         {
-            "title": "Workspace 1",
-            "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_3/state",
-            "actions": [
-                {
-                    "message": "ON",
-                    "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "OFF",
-                    "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
-                    "retained": true
-                }
-            ]
-        },
-        {
-            "title": "Workspace 2",
-            "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_6/state",
-            "actions": [
-                {
-                    "message": "ON",
-                    "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "OFF",
-                    "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
-                    "retained": true
-                }
-            ]
-        },
-        {
-            "title": "CoLAB Space",
-            "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_2/state",
-            "actions": [
-                {
-                    "message": "ON",
-                    "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "OFF",
-                    "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
-                    "retained": true
-                }
-            ]
-        },
-        {
-            "title": "Meetings Room",
-            "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_7/state",
-            "actions": [
-                {
-                    "message": "ON",
-                    "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "OFF",
-                    "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
-                    "retained": true
-                }
-            ]
-        },
-        {
-            "title": "Offices",
-            "icon": "light",
-            "topic": "lightbox/lightbox-i/switch/light_1/state",
-            "actions": [
-                {
-                    "message": "ON",
-                    "color": "yellow",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
-                    "retained": true
-                },
-                {
-                    "message": "OFF",
-                    "color": "blue-grey",
-                    "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
-                    "retained": true
-                }
-            ]
-        },
-        {
-            "title": "3D Printer",
-            "icon": "view_in_ar",
-            "topic": "3dprinter/cr200b/virtual/status",
-            "actions": [
-                {
-                    "message": "on",
-                    "color": "blue",
-                    "actionTopic": "shellies/plug-i/relay/0/command"
-                },
-                {
-                    "message": "off",
-                    "color": "blue-grey",
-                    "actionTopic": "shellies/plug-i/relay/0/command"
-                },
-                {
-                    "message": "Operational",
-                    "color": "green"
-                },
-                {
-                    "message": "Printing",
-                    "color": "yellow"
-                }
-            ]
+          "message": "GOODBYE",
+          "color": "blue-grey",
+          "actionTopic": "office/control/cmd",
+          "retained": true
         }
-    ]
+      ]
+    },
+    {
+      "title": "Workspace 1",
+      "icon": "light",
+      "category": "switch",
+      "topic": "lightbox/lightbox-i/switch/light_3/state",
+      "actions": [
+        {
+          "message": "ON",
+          "color": "yellow",
+          "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
+          "retained": true
+        },
+        {
+          "message": "OFF",
+          "color": "blue-grey",
+          "actionTopic": "lightbox/lightbox-i/switch/light_3/cmd",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "title": "Workspace 2",
+      "icon": "light",
+      "category": "switch",
+      "topic": "lightbox/lightbox-i/switch/light_6/state",
+      "actions": [
+        {
+          "message": "ON",
+          "color": "yellow",
+          "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
+          "retained": true
+        },
+        {
+          "message": "OFF",
+          "color": "blue-grey",
+          "actionTopic": "lightbox/lightbox-i/switch/light_6/cmd",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "title": "CoLAB Space",
+      "icon": "light",
+      "category": "switch",
+      "topic": "lightbox/lightbox-i/switch/light_2/state",
+      "actions": [
+        {
+          "message": "ON",
+          "color": "yellow",
+          "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
+          "retained": true
+        },
+        {
+          "message": "OFF",
+          "color": "blue-grey",
+          "actionTopic": "lightbox/lightbox-i/switch/light_2/cmd",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "title": "Meetings Room",
+      "icon": "light",
+      "category": "switch",
+      "topic": "lightbox/lightbox-i/switch/light_7/state",
+      "actions": [
+        {
+          "message": "ON",
+          "color": "yellow",
+          "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
+          "retained": true
+        },
+        {
+          "message": "OFF",
+          "color": "blue-grey",
+          "actionTopic": "lightbox/lightbox-i/switch/light_7/cmd",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "title": "Offices",
+      "icon": "light",
+      "category": "switch",
+      "topic": "lightbox/lightbox-i/switch/light_1/state",
+      "actions": [
+        {
+          "message": "ON",
+          "color": "yellow",
+          "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
+          "retained": true
+        },
+        {
+          "message": "OFF",
+          "color": "blue-grey",
+          "actionTopic": "lightbox/lightbox-i/switch/light_1/cmd",
+          "retained": true
+        }
+      ]
+    },
+    {
+      "title": "3D Printer",
+      "icon": "view_in_ar",
+      "topic": "3dprinter/cr200b/virtual/status",
+      "category": "actuator",
+      "actions": [
+        {
+          "message": "on",
+          "color": "blue",
+          "actionTopic": "shellies/plug-i/relay/0/command"
+        },
+        {
+          "message": "off",
+          "color": "blue-grey",
+          "actionTopic": "shellies/plug-i/relay/0/command"
+        },
+        {
+          "message": "Operational",
+          "color": "green"
+        },
+        {
+          "message": "Printing",
+          "color": "yellow"
+        }
+      ]
+    },
+    {
+      "title": "Window I",
+      "icon": "window",
+      "topic": "windows/window-i/status",
+      "category": "sensor",
+      "actions": [
+        {
+          "message": "opened",
+          "color": "red"
+        },
+        {
+          "message": "closed",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "title": "Window II",
+      "icon": "window",
+      "topic": "windows/window-ii/status",
+      "category": "sensor",
+      "actions": [
+        {
+          "message": "opened",
+          "color": "red"
+        },
+        {
+          "message": "closed",
+          "color": "green"
+        }
+      ]
+    },
+    {
+      "title": "Temperature",
+      "icon": "thermostat",
+      "topic": "sensorbox/sensorbox-iv/sensor/temperature/state",
+      "unit": "ºC",
+      "category": "sensor"
+    }
+  ]
 }

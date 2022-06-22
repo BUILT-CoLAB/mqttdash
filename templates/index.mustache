@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <head>
   <title>{{dashboard}}</title>
-
+  <link rel="icon" type="image/x-icon" href="{{favicon}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
-  <script
-    src="./lib/paho-mqtt.js"
-    type="text/javascript"
-  ></script>
-
+  <script src="./lib/paho-mqtt.js" type="text/javascript"></script>
   <script src="main.js" type="text/javascript" defer></script>
 </head>
 <body>
@@ -23,25 +16,45 @@
       </a>
     </div>
     <div class="navbar-menu navbar-end">
+      
+      {{#extralinks}}
       <div class="navbar-item">
         <div class="field is-grouped">
           <p class="control">
-            <a class="button yellow" href="http://smarthub.dev.lan:3000">
+            <a class="button blue-grey" href="{{url}}">
               <span class="icon">
-                <i class="material-icons">query_stats</i>
+                <i class="material-icons">{{icon}}</i>
               </span>
-              <span>Grafana</span>
+              <span>{{name}}</span>
             </a>
           </p>
         </div>
       </div>
+      {{/extralinks}}
+     
     </div>
   </nav>
   <br>
   <div class="container">
+    <div class="tabs is-toggle is-fullwidth is-medium">
+      <ul>
+       {{#categories}}
+        <li class="{{#default}}is-active{{/default}}">
+          <a class="category-btn" data-category="{{category}}">
+            <span class="icon is-small">
+              <span class="material-icons">
+                {{ icon }}
+              </span>
+            </span>
+            <span>{{ name }}</span>
+          </a>
+        </li>
+        {{/categories}}
+      </ul>
+    </div>
     <div class="columns is-multiline is-desktop">
       {{#devices}}
-      <div class="column is-one-quarter-desktop">
+      <div class="column is-one-quarter-desktop {{category}}">
         <div class="card grey mqtt-topic" id="{{{ topic }}}" {{#actions}}{{#color}}data-{{message}}="{{color}}"{{/color}}{{/actions}}>
           <header class="card-header">
             <p class="card-header-title">
@@ -71,10 +84,10 @@
                 class="card-footer-item {{#obs}}tooltipped{{/obs}}"
                 {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
                 {{#retained}}
-                onclick="sendMessage('{{{actionTopic}}}','{{{message}}}', {{{retained}}})"
+                  onclick="sendMessage('{{{actionTopic}}}','{{{message}}}', {{{retained}}})"
                 {{/retained}}
                 {{^retained}}
-                onclick="sendMessage('{{{actionTopic}}}','{{{message}}}')"
+                  onclick="sendMessage('{{{actionTopic}}}','{{{message}}}')"
                 {{/retained}}
               >
                 {{ message }}  

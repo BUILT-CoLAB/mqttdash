@@ -2,10 +2,16 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
 html,
 body {
-  height: 100%;
-  background: #e8e8e8;
+  background: #3c6382;
 }
 .card-content {
   height: 150px;
@@ -20,7 +26,7 @@ body {
   background-color: #212121;
 }
 .blue {
-  background-color: #0d47a1;
+  background-color: #13405b;
 }
 .indigo {
   background-color: #1a237e;
@@ -45,28 +51,81 @@ body {
 }
 
 .card-footer .card-footer-item {
-  color: white;
-  background-color: #0d47a1;
+  color: #e8e8e8;
+  background-color: #13405b;
   text-transform: uppercase;
 }
+.tabs.is-toggle li.is-active a {
+  border-color: hsla(0, 0%, 0%, 0);
+}
+
+.tabs.is-toggle a {
+  background-color: #263238;
+  color: #e8e8e8;
+  border: none;
+  margin: 1px;
+}
+
+.tabs.is-toggle li.is-active a {
+  background-color: #13405b;
+}
+
+.tabs.is-toggle a:hover {
+  background-color: #263238;
+  border: none;
+  z-index: 2;
+}
+
 .card-header {
-  color: white;
+  color: #e8e8e8;
   background-color: #0d48a15b;
 }
 .card-header-title {
-  color: white;
+  color: #e8e8e8;
 }
 
 .card-content .content h4 {
-  color: white;
+  color: #e8e8e8;
+}
+
+.card-footer-item:not(:last-child) {
+  border-right: 1px solid #212121;
+}
+
+.card-footer {
+  background-color: inherit;
+  border-top: none;
+  align-items: stretch;
+  display: flex;
+  height: 50px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .button {
-  color: white;
+  color: #e8e8e8;
+  border: none;
+}
+
+.button:hover {
+  color: #e8e8e8;
+  border: none;
+}
+
+a span {
+  pointer-events: none;
 }
 
 .is-size-two {
   font-size: 2.5rem;
+}
+
+.darkmode-layer,
+.darkmode-toggle {
+  z-index: 500;
 }
 
 @media (hover: none) and (pointer: coarse) {
