@@ -89,3 +89,12 @@ Each `action` object has:
 - `color`: the color correponding to the specific `message`. The card color changes accordingly. The color must be one of the following: `grey`, `indigo`, `blue`, `blue-grey`, `yellow`, `green`, `red`, `purple`, and `orange` (new colors or change defaults can be done by modifying the [style.css](style.css) file).
 
 Some examples of _devices_ can be found in the [examples folder](examples).
+
+## Dependencies
+
+- CSS lib: [Bulma.io](https://bulma.io/)
+- MQTT JS lib: [Eclipse Paho](https://www.eclipse.org/paho/)
+
+## Licensing
+
+Copyright (c) 2021-2022 BUILT CoLAB under MIT license.
