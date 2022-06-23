@@ -1,0 +1,16 @@
+{
+  "title": "Window II",
+  "icon": "window",
+  "topic": "windows/window-ii/status",
+  "category": "sensor",
+  "actions": [
+    {
+      "message": "opened",
+      "color": "red"
+    },
+    {
+      "message": "closed",
+      "color": "green"
+    }
+  ]
+}
