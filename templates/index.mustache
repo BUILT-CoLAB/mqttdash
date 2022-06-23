@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>{{dashboard}}</title>
+  <title>{{title}}</title>
   <link rel="icon" type="image/x-icon" href="{{favicon}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -21,7 +21,7 @@
       <div class="navbar-item">
         <div class="field is-grouped">
           <p class="control">
-            <a class="button blue-grey" href="{{url}}">
+            <a class="button blue-grey" target="_blank" href="{{url}}">
               <span class="icon">
                 <i class="material-icons">{{icon}}</i>
               </span>
@@ -58,7 +58,7 @@
         <div class="card grey mqtt-topic" id="{{{ topic }}}" {{#actions}}{{#color}}data-{{message}}="{{color}}"{{/color}}{{/actions}}>
           <header class="card-header">
             <p class="card-header-title">
-              {{ title }}
+              {{ name }}
             </p>
           </header>
           <div class="card-content">

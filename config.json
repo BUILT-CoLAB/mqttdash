@@ -1,7 +1,14 @@
 {
-  "dashboard": "Dashboard",
+  "title": "Dashboard",
   "favicon": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-icon-150x150.png",
   "logo": "https://builtcolab.pt/wp-content/uploads/2020/10/builtcolab-logo-white.svg",
+  "extralinks": [
+    {
+      "name": "Grafana",
+      "icon": "analytics",
+      "url": "http://smarthub.dev.lan:3000"
+    }
+  ],
   "categories": [
     {
       "name": "Switches",
@@ -25,16 +32,9 @@
       "icon": "select_all"
     }
   ],
-  "extralinks": [
-    {
-      "name": "Grafana",
-      "icon": "analytics",
-      "url": "http://smarthub.dev.lan:3000"
-    }
-  ],
   "devices": [
     {
-      "title": "Office",
+      "name": "Office",
       "icon": "apartment",
       "topic": "office/control",
       "category": "switch",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "title": "Workspace 1",
+      "name": "Workspace 1",
       "icon": "light",
       "category": "switch",
       "topic": "lightbox/lightbox-i/switch/light_3/state",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "title": "Workspace 2",
+      "name": "Workspace 2",
       "icon": "light",
       "category": "switch",
       "topic": "lightbox/lightbox-i/switch/light_6/state",
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "title": "CoLAB Space",
+      "name": "CoLAB Space",
       "icon": "light",
       "category": "switch",
       "topic": "lightbox/lightbox-i/switch/light_2/state",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "title": "Meetings Room",
+      "name": "Meetings Room",
       "icon": "light",
       "category": "switch",
       "topic": "lightbox/lightbox-i/switch/light_7/state",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "title": "Offices",
+      "name": "Offices",
       "icon": "light",
       "category": "switch",
       "topic": "lightbox/lightbox-i/switch/light_1/state",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "title": "3D Printer",
+      "name": "3D Printer",
       "icon": "view_in_ar",
       "topic": "3dprinter/cr200b/virtual/status",
       "category": "actuator",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "title": "Window I",
+      "name": "Window I",
       "icon": "window",
       "topic": "windows/window-i/status",
       "category": "sensor",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "title": "Window II",
+      "name": "Window II",
       "icon": "window",
       "topic": "windows/window-ii/status",
       "category": "sensor",
@@ -212,11 +212,17 @@
       ]
     },
     {
-      "title": "Temperature",
+      "name": "Temperature",
       "icon": "thermostat",
       "topic": "sensorbox/sensorbox-iv/sensor/temperature/state",
       "unit": "ºC",
       "category": "sensor"
+    },
+    {
+      "name": "Humidity",
+      "icon": "thermostat",
+      "topic": "sensorbox/sensorbox-iv/sensor/humidity/state",
+      "unit": "%"
     }
   ]
 }
