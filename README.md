@@ -3,8 +3,11 @@
 A simple codegen tool for developing single-page dashboards using MQTT-over-Websockets.
 
 It uses [mustache](https://mustache.github.io/) to generate a static web page according to the [templates/index.mustache](templates/index.mustache) template.
-
 Communication happens using MQTT-over-Websockets, and the `retained` messages are leveraged as a topic-based state datastore.
+
+## Web Interface Example
+
+![docs/index](docs/index.png)
 
 ## How to run
 
@@ -86,7 +89,3 @@ Each `action` object has:
 - `color`: the color correponding to the specific `message`. The card color changes accordingly. The color must be one of the following: `grey`, `indigo`, `blue`, `blue-grey`, `yellow`, `green`, `red`, `purple`, and `orange` (new colors or change defaults can be done by modifying the [style.css](style.css) file).
 
 Some examples of _devices_ can be found in the [examples folder](examples).
-
-## Web Interface Example
-
-![docs/index](docs/index.png)
