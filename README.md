@@ -5,7 +5,7 @@ A simple codegen tool for developing single-page dashboards using MQTT-over-Webs
 It uses [mustache](https://mustache.github.io/) to generate a static web page according to the [templates/index.mustache](templates/index.mustache) template.
 Communication happens using MQTT-over-Websockets, and the `retained` messages are leveraged as a topic-based state datastore.
 
-Entities are configured on a separate configuration file, here is an example:
+Entities are configured on a separate configuration file, here is an output example:
 
 ![docs/index](docs/index.png)
 
