@@ -9,6 +9,8 @@
   --purple: #4a148c;
   --orange: #e65100;
 
+  --white-grey: #e1e1e1;
+
   --bg-color: #3c6382;
   --bg-btn-color: #263238;
   --bg-card-header: #0d48a15b;
@@ -137,6 +139,12 @@ a span {
 
 .is-size-two {
   font-size: 2.5rem;
+}
+
+.content > .obs {
+  color: var(--white-grey);
+  font-size: smaller;
+  font-style: oblique;
 }
 
 @media (hover: none) and (pointer: coarse) {

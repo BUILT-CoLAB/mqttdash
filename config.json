@@ -212,10 +212,28 @@
       ]
     },
     {
+      "name": "Meetings Room Status",
+      "icon": "groups",
+      "topic": "office/meetings-room/status",
+      "category": "sensor",
+      "obs": "for the next 15min",
+      "actions": [
+        {
+          "message": "free",
+          "color": "green"
+        },
+        {
+          "message": "busy",
+          "color": "red"
+        }
+      ]
+    },
+    {
       "name": "Temperature",
       "icon": "thermostat",
       "topic": "sensorbox/sensorbox-iv/sensor/temperature/state",
       "unit": "ºC",
+      "obs": "sensors average",
       "category": "sensor"
     },
     {
