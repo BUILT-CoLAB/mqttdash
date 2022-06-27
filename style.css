@@ -164,4 +164,11 @@ a span {
   .navbar-item img {
     max-height: 3.5rem;
   }
+  .card-footer {
+    height: 100px;
+  }
+  .tabs.is-toggle a {
+    height: 100px;
+    font-size: xx-large;
+  }
 }
