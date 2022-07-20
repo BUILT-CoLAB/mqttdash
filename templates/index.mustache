@@ -73,7 +73,9 @@
                 </span>
                 {{#unit}}<span>{{unit}}</span>{{/unit}}
               </h4>
-              {{#obs}}<p class="obs">{{obs}}</p>{{/obs}}
+              {{#obs}}
+                <p class="obs">{{obs}}</p>
+              {{/obs}}
             </div>
           </div>
           </div>
@@ -83,7 +85,9 @@
               {{#message}}
               <a
                 class="card-footer-item {{#obs}}tooltipped{{/obs}}"
-                {{#obs}} data-position="top" data-tooltip="{{obs}}"{{/obs}}
+                {{#obs}} 
+                  data-position="top" data-tooltip="{{obs}}"
+                {{/obs}}
                 {{#retained}}
                   onclick="sendMessage('{{{actionTopic}}}','{{{message}}}', {{{retained}}})"
                 {{/retained}}
