@@ -31,6 +31,7 @@ jobs:
             p/secrets
             p/ci
             p/dockerfile
+            p/javascript
           #add language-specific configs to the above list
       - name: create-issue-from-file
         if: failure()
