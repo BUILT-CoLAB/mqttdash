@@ -1,0 +1,39 @@
+{
+  "name": "HVAC Openspace North-Right ",
+  "icon": "hvac",
+  "topic": "sensorbox/sensorbox-iv/ir/1/command",
+  "category": "actuator",
+  "color": "grey",
+  "actions": [
+    {
+      "message": "plus",
+      "color": "blue",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    },
+    {
+      "message": "minus",
+      "color": "blue",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    },
+    {
+      "message": "heat",
+      "color": "blue",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    },
+    {
+      "message": "cool",
+      "color": "blue",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    },
+    {
+      "message": "on",
+      "color": "blue",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    },
+    {
+      "message": "off",
+      "color": "blue-grey",
+      "actionTopic": "hasp/dashboard-i/hvav/ir/1/command"
+    }
+  ]
+}

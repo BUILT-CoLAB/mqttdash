@@ -32,7 +32,7 @@ body {
   background: var(--bg-color);
 }
 .card-content {
-  height: 150px;
+  min-height: 235px;
 }
 .loader-wrapper {
   display: flex;
@@ -68,12 +68,6 @@ body {
   background-color: var(--orange);
 }
 
-.card-footer .card-footer-item {
-  color: var(--white);
-  background-color: var(--blue);
-  text-transform: uppercase;
-}
-
 .tabs.is-toggle a {
   background-color: var(--bg-btn-color);
   color: var(--white);
@@ -103,16 +97,31 @@ body {
   color: var(--white);
 }
 
-.card-footer-item:not(:last-child) {
-  border-right: 1px solid var(--grey);
+.card-footer {
+  background-color: var(--blue);
+  border-top: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.card-footer {
-  background-color: inherit;
-  border-top: none;
-  align-items: stretch;
-  display: flex;
-  height: 50px;
+.card-footer .card-footer-item {
+  color: var(--white);
+  background-color: #0e4166;
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  flex-grow: 1;
+  width: 20%; /* 100 / (n + 1) */
+  margin: 5px;
+  text-align: center;
+}
+
+.column-hidden {
+  display: none;
 }
 
 .navbar {
@@ -121,6 +130,7 @@ body {
 
 .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+  height: 100%;
 }
 
 .button {
@@ -152,7 +162,7 @@ a span {
     font-size: xxx-large;
   }
   .card-content {
-    height: 300px;
+    min-height: 300px;
   }
   .is-size-two {
     font-size: 6.5rem;
