@@ -241,6 +241,41 @@
       "icon": "thermostat",
       "topic": "sensorbox/sensorbox-iv/sensor/humidity/state",
       "unit": "%"
+    },
+    {
+      "name": "HVAC COLAB Space",
+      "icon": "hvac",
+      "topic": "office/hvac/colab-space/state",
+      "category": "actuator",
+      "color": "grey",
+      "unit": "ºC",
+      "actions": [
+        {
+          "message": "plus",
+          "color": "blue",
+          "actionTopic": "office/hvac/colab-space/cmd"
+        },
+        {
+          "message": "minus",
+          "color": "blue",
+          "actionTopic": "office/hvac/colab-space/cmd"
+        },
+        {
+          "message": "heat",
+          "color": "blue",
+          "actionTopic": "office/hvac/colab-space/cmd"
+        },
+        {
+          "message": "cool",
+          "color": "blue",
+          "actionTopic": "office/hvac/colab-space/cmd"
+        },
+        {
+          "message": "off",
+          "color": "blue-grey",
+          "actionTopic": "office/hvac/colab-space/cmd"
+        }
+      ]
     }
   ]
 }

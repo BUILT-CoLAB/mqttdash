@@ -44,6 +44,9 @@ function onConnectionLost(responseObject) {
 async function update(elementId, value) {
   const elementCard = document.getElementById(elementId);
   elementCard.getElementsByClassName('mqtt-payload')[0].textContent = value.toUpperCase();
+  if (elementCard.getElementsByClassName('units')[0]) {
+    elementCard.getElementsByClassName('units')[0].style.display = 'inline';
+  }
   const colorattribute = { ...elementCard.dataset };
   // console.log(colorattribute)
   if (Object.keys(colorattribute).length > 0) {

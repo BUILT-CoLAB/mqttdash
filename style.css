@@ -121,6 +121,10 @@ body {
   text-align: center;
 }
 
+.card-footer-item:hover {
+  background: #192e4e;
+}
+
 .column-hidden {
   display: none;
 }
