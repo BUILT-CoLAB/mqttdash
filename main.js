@@ -1,6 +1,6 @@
 // Create a client instance
 const clientID = `web${new Date().getTime()}`;
-const client = new Paho.Client('smarthub.dev.lan', Number(9001), clientID);
+const client = new Paho.Client('example.com', Number(9001), clientID);
 
 // called when the client connects
 function onConnect() {
