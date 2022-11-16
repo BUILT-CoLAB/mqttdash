@@ -241,6 +241,36 @@
       "icon": "thermostat",
       "topic": "sensorbox/sensorbox-iv/sensor/humidity/state",
       "unit": "%"
+    },
+    {
+      "name": "HVAC COLAB Space",
+      "icon": "hvac",
+      "topic": "office/hvac/openspace-north-east/state",
+      "category": "actuator",
+      "color": "grey",
+      "unit": "ºC",
+      "actions": [
+        {
+          "message": "plus",
+          "actionTopic": "office/hvac/openspace-north-east/cmd"
+        },
+        {
+          "message": "minus",
+          "actionTopic": "office/hvac/openspace-north-east/cmd"
+        },
+        {
+          "message": "heat",
+          "actionTopic": "office/hvac/openspace-north-east/cmd"
+        },
+        {
+          "message": "cool",
+          "actionTopic": "office/hvac/openspace-north-east/cmd"
+        },
+        {
+          "message": "off",
+          "actionTopic": "office/hvac/openspace-north-east/cmd"
+        }
+      ]
     }
   ]
 }
