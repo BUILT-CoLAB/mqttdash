@@ -68,7 +68,7 @@ client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 
 function setVisibleByCat(category) {
-  for (el of [...document.querySelectorAll('.column')]) {
+  for (const el of [...document.querySelectorAll('.column')]) {
     if ([...document.querySelectorAll('.column')].filter((elfil) => elfil.classList.contains(category)).length === 0) {
       el.classList.remove('column-hidden');
     } else if (el.classList.contains(category)) {
@@ -76,7 +76,7 @@ function setVisibleByCat(category) {
     } else {
       el.classList.add('column-hidden');
     }
-    for (elbtn of [...document.querySelectorAll('.category-btn')]) {
+    for (const elbtn of [...document.querySelectorAll('.category-btn')]) {
       if (elbtn.dataset.category === category) {
         elbtn.parentElement.classList.add('is-active');
       } else {
